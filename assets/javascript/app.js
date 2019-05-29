@@ -1,4 +1,3 @@
-$(document).ready(function(){
     var timer = 30;
     var correctAnswerTimer = 5;
     var resultsTimer = 5;
@@ -14,11 +13,13 @@ $(document).ready(function(){
     var question4displayed = false;
     var question5displayed = false;
 
+$(document).ready(function(){
     // Countdown for seconds remaining for question
     function timer() {
         $("#timer").html("Time Left: 30");
-        intervalID = setInterval (1000);
+        timer = setInterval (endOfTimer(), 1000);
     }
+
 
     // function to show question
 
@@ -29,12 +30,12 @@ $(document).ready(function(){
         $("#timer").html("Time is up.");
 
         //shows Question 2
-        // if (question1displayed==true){
-        //     question1displayed = false;
-        //     question2displayed = true;
-        //     timer = 30;
-        //     question2();
-        // }
+        if (question1displayed==true){
+            question1displayed = false;
+            question2displayed = true;
+            timer = 30;
+            question2();
+        }
 
         // //shows Question 3
         // else if (question2displayed==true){
@@ -76,38 +77,31 @@ $(document).ready(function(){
         $("#answerA").on("click", question1AnswerA);
         $("#answerB").on("click", question1AnswerB);
         $("#answerC").on("click", question1AnswerC);
-        $("#answerD").on("click", question1AnswerD);
-
-        //Adds timer to question
-        timer();
+        $("#answerD").on("click", question1AnswerD);        
     }
 
     console.log(question1);
 
     // // Question2
-    // function question2 () {
-    //     $("#answerDisplay").html("");
-    //     $("#questionNumber").html("Question 2 of 5");
-    //     $("#question").html("What does GNB stand for?");
+    function question2 () {
+        $("#answerDisplay").html("");
+        $("#questionNumber").html("Question 2 of 5");
+        $("#question").html("What does GNB stand for?");
 
-    //     //Answers for the question
-    //     $("answerA").html("Global Networking Brand");
-    //     $("answerB").html("Greenway National Bank");
-    //     $("answerC").html("Goliath National Bank");
-    //     $("answerD").html("Grant Nutritional Brand");
+        //Answers for the question
+        $("#answerA").html("Global Networking Brand");
+        $("#answerB").html("Greenway National Bank");
+        $("#answerC").html("Goliath National Bank");
+        $("#answerD").html("Grant Nutritional Brand");
 
-    //     $("#answerA").unbind("click");
-    //     $("#answerB").unbind("click");
-    //     $("#answerC").unbind("click");
-    //     $("#answerD").unbind("click");
-    //     $("#answerA").on("click", question2AnswerA);
-    //     $("#answerB").on("click", question2AnswerB);
-    //     $("#answerC").on("click", question2AnswerC);
-    //     $("#answerD").on("click", question2AnswerD);
+        $("#answerA").on("click", question2AnswerA);
+        $("#answerB").on("click", question2AnswerB);
+        $("#answerC").on("click", question2AnswerC);
+        $("#answerD").on("click", question2AnswerD);
 
-    //     //Adds timer to question
-    //     timer();
-    // }
+        //Adds timer to question
+        // timer();
+    }
 
     // // Question3
     // function question3 () {
@@ -121,10 +115,6 @@ $(document).ready(function(){
     //     $("answerC").html("Stella");
     //     $("answerD").html("Nora");
 
-    //     $("#answerA").unbind("click");
-    //     $("#answerB").unbind("click");
-    //     $("#answerC").unbind("click");
-    //     $("#answerD").unbind("click");
     //     $("#answerA").on("click", question3AnswerA);
     //     $("#answerB").on("click", question3AnswerB);
     //     $("#answerC").on("click", question3AnswerC);
@@ -146,10 +136,6 @@ $(document).ready(function(){
     //     $("answerC").html("Stella");
     //     $("answerD").html("Abby");
 
-    //     $("#answerA").unbind("click");
-    //     $("#answerB").unbind("click");
-    //     $("#answerC").unbind("click");
-    //     $("#answerD").unbind("click");
     //     $("#answerA").on("click", question4AnswerA);
     //     $("#answerB").on("click", question4AnswerB);
     //     $("#answerC").on("click", question4AnswerC);
@@ -171,10 +157,6 @@ $(document).ready(function(){
     //     $("answerC").html("7");
     //     $("answerD").html("10");
 
-    //     $("#answerA").unbind("click");
-    //     $("#answerB").unbind("click");
-    //     $("#answerC").unbind("click");
-    //     $("#answerD").unbind("click");
     //     $("#answerA").on("click", question5AnswerA);
     //     $("#answerB").on("click", question5AnswerB);
     //     $("#answerC").on("click", question5AnswerC);
@@ -189,49 +171,49 @@ $(document).ready(function(){
     //functions for answers for question 1
     function question1AnswerA(){
         incorrectAnswer++;
-        clearInterval(Timer)
+        // clearInterval(Timer)
         $("#timer").html("Time is up.");
         $("#answerA").html("");
         $("#answerB").html("");
         $("#answerC").html("");
         $("#answerD").html("");
-        $("#answerDisplay").html("Oops, the correct answer was French Horn.");
+        $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
     }
 
     function question1AnswerB(){
         incorrectAnswer++;
-        clearInterval(Timer)
+        // clearInterval(Timer)
         $("#timer").html("Time is up.");
         $("#answerA").html("");
         $("#answerB").html("");
         $("#answerC").html("");
         $("#answerD").html("");
-        $("#answerDisplay").html("Oops, the correct answer was French Horn.");
+        $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
     }
 
     function question1AnswerC (){
         correctAnswer++;
-        clearInterval(Timer)
+        // clearInterval(Timer)
         $("#timer").html("Time is up.");
         $("#answerA").html("");
         $("#answerB").html("");
         $("#answerC").html("");
         $("#answerD").html("");
-        $("#answerDisplay").html("Correct")
+        $(".answerDisplay").html("Correct")
         clearInterval(resultsTimer);
     }
 
     function question1AnswerD(){
         incorrectAnswer++;
-        clearInterval(Timer)
+        // clearInterval(Timer)
         $("#timer").html("Time is up.");
         $("#answerA").html("");
         $("#answerB").html("");
         $("#answerC").html("");
         $("#answerD").html("");
-        $("#answerDisplay").html("Oops, the correct answer was French Horn.");
+        $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
     }
 
