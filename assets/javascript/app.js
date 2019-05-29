@@ -23,13 +23,13 @@ function Timer() {
 function question1 () {
     $("#answerDisplay").html("");
     $("#questionNumber").html("Question 1 of 5");
-    $("#questions").html("Questions # 1 goes here");
+    $("#questions").html("On his first date with Robin, what instrument did Ted steal from the restaurant?");
 
     //Answers for the question
-    $("answerA").html("Answer A goes here");
-    $("answerB").html("Answer B goes here");
-    $("answerC").html("Answer C goes here");
-    $("answerD").html("Answer D goes here");
+    $("answerA").html("Kazoo");
+    $("answerB").html("Clarinet");
+    $("answerC").html("French Horn");
+    $("answerD").html("Triangle");
 
     $("#answerA").unbind("click");
     $("#answerB").unbind("click");
@@ -48,13 +48,13 @@ function question1 () {
 function question2 () {
     $("#answerDisplay").html("");
     $("#questionNumber").html("Question 2 of 5");
-    $("#questions").html("Questions # 2 goes here");
+    $("#questions").html("What does GNB stand for?");
 
     //Answers for the question
-    $("answerA").html("Answer A goes here");
-    $("answerB").html("Answer B goes here");
-    $("answerC").html("Answer C goes here");
-    $("answerD").html("Answer D goes here");
+    $("answerA").html("Global Networking Brand");
+    $("answerB").html("Greenway National Bank");
+    $("answerC").html("Goliath National Bank");
+    $("answerD").html("Grant Nutritional Brand");
 
     $("#answerA").unbind("click");
     $("#answerB").unbind("click");
@@ -73,13 +73,13 @@ function question2 () {
 function question3 () {
     $("#answerDisplay").html("");
     $("#questionNumber").html("Question 3 of 5");
-    $("#questions").html("Questions # 3 goes here");
+    $("#questions").html("Who did Ted not date?");
 
     //Answers for the question
-    $("answerA").html("Answer A goes here");
-    $("answerB").html("Answer B goes here");
-    $("answerC").html("Answer C goes here");
-    $("answerD").html("Answer D goes here");
+    $("answerA").html("Zoey");
+    $("answerB").html("Victoria");
+    $("answerC").html("Stella");
+    $("answerD").html("Nora");
 
     $("#answerA").unbind("click");
     $("#answerB").unbind("click");
@@ -98,13 +98,13 @@ function question3 () {
 function question4 () {
     $("#answerDisplay").html("");
     $("#questionNumber").html("Question 4 of 5");
-    $("#questions").html("Questions # 4 goes here");
+    $("#questions").html("Who is Robin's work enemy?");
 
     //Answers for the question
-    $("answerA").html("Answer A goes here");
-    $("answerB").html("Answer B goes here");
-    $("answerC").html("Answer C goes here");
-    $("answerD").html("Answer D goes here");
+    $("answerA").html("Nora");
+    $("answerB").html("Patrice");
+    $("answerC").html("Stella");
+    $("answerD").html("Abby");
 
     $("#answerA").unbind("click");
     $("#answerB").unbind("click");
@@ -123,13 +123,13 @@ function question4 () {
 function question5 () {
     $("#answerDisplay").html("");
     $("#questionNumber").html("Question 5 of 5");
-    $("#questions").html("Questions # 5 goes here");
+    $("#questions").html("How many slaps were awarded by Lily to Marshall during the Marshall-Barney Slap Bet?");
 
     //Answers for the question
-    $("answerA").html("Answer A goes here");
-    $("answerB").html("Answer B goes here");
-    $("answerC").html("Answer C goes here");
-    $("answerD").html("Answer D goes here");
+    $("answerA").html("2");
+    $("answerB").html("5");
+    $("answerC").html("7");
+    $("answerD").html("10");
 
     $("#answerA").unbind("click");
     $("#answerB").unbind("click");
