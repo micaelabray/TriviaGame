@@ -1,17 +1,70 @@
-    var timer = 30;
-    var correctAnswerTimer = 5;
-    var resultsTimer = 5;
-    var correctAnswer = 0;
-    var incorrectAnswer = 0;
-    // var results = 5;
+var questions = [
+    {
+        question: "On his first date with Robin, what instrument did Ted steal from the restaurant?",
+        answers: [
+            "Kazoo",
+            "Clarinet",
+            "French Horn",
+            "Triangle"
+        ],
+        correctAnswer: "C"
+    },
+    {
+        question: "What does GNB stand for?",
+        answers: [
+            "Global Networking Brand",
+            "Greenway National Bank",
+            "Goliath National Bank",
+            "Grant Nutritional Brand",
+        ],
+        correctAnswer: "C"
+    },
+    {
+        question: "Who did Ted not date?",
+        answers: [
+            "Zoey",
+            "Victoria",
+            "Stella",
+            "Nora",
+        ],
+        correctAnswer: "D"
+    },
+    {
+        question: "Who is Robin's work enemy?",
+        answer: [
+            "Nora",
+            "Patrice",
+            "Stella",
+            "Abby",
+        ],
+        correctAnswer: "B"
+    },
+    {
+        question: "How many slaps were awarded by Lily to Marshall during the Marshall-Barney Slap Bet?",
+        answer: [
+            "2",
+            "5",
+            "7",
+            "10",
+        ],
+        correctAnswer: "5"
+    },
+]
 
-    // Creating variables for each question number for when
-    // going through the loop, the question is shown.
-    var question1displayed = true;
-    var question2displayed = false;
-    var question3displayed = false;
-    var question4displayed = false;
-    var question5displayed = false;
+var timer = 30;
+var correctAnswerTimer = 5;
+var resultsTimer = 5;
+var correctAnswer = 0;
+var incorrectAnswer = 0;
+// var results = 5;
+
+// Creating variables for each question number for when
+// going through the loop, the question is shown.
+var question1displayed = true;
+var question2displayed = false;
+var question3displayed = false;
+var question4displayed = false;
+var question5displayed = false;
 
 $(document).ready(function(){
     // Countdown for seconds remaining for question
@@ -30,12 +83,12 @@ $(document).ready(function(){
         $("#timer").html("Time is up.");
 
         //shows Question 2
-        if (question1displayed==true){
-            question1displayed = false;
-            question2displayed = true;
-            timer = 30;
-            question2();
-        }
+        // if (question1displayed==true){
+        //     question1displayed = false;
+        //     question2displayed = true;
+        //     timer = 30;
+        //     question2();
+        // }
 
         // //shows Question 3
         // else if (question2displayed==true){
@@ -62,7 +115,7 @@ $(document).ready(function(){
         // }
     }
 
-    // Question1
+    // // Question1
     function question1 () {
         $("#answerDisplay").html("");
         $("#questionNumber").html("Question 1 of 5");
@@ -80,9 +133,9 @@ $(document).ready(function(){
         $("#answerD").on("click", question1AnswerD);        
     }
 
-    console.log(question1);
+    // console.log(question1);
 
-    // // Question2
+    // // // Question2
     function question2 () {
         $("#answerDisplay").html("");
         $("#questionNumber").html("Question 2 of 5");
@@ -99,7 +152,7 @@ $(document).ready(function(){
         $("#answerC").on("click", question2AnswerC);
         $("#answerD").on("click", question2AnswerD);
 
-        //Adds timer to question
+        // Adds timer to question
         // timer();
     }
 
@@ -179,6 +232,7 @@ $(document).ready(function(){
         $("#answerD").html("");
         $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
+        question2();
     }
 
     function question1AnswerB(){
@@ -191,6 +245,7 @@ $(document).ready(function(){
         $("#answerD").html("");
         $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
+        question2();
     }
 
     function question1AnswerC (){
@@ -203,6 +258,7 @@ $(document).ready(function(){
         $("#answerD").html("");
         $(".answerDisplay").html("Correct")
         clearInterval(resultsTimer);
+        question2();
     }
 
     function question1AnswerD(){
@@ -215,6 +271,7 @@ $(document).ready(function(){
         $("#answerD").html("");
         $(".answerDisplay").html("Oops, the correct answer was French Horn.");
         clearInterval(resultsTimer);
+        question2();
     }
 
 
