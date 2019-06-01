@@ -36,7 +36,7 @@ var questions = [
     {
         number: "4",
         question: "Who is Robin's work enemy?",
-        answer: [
+        answers: [
             "Nora",
             "Patrice",
             "Stella",
@@ -47,7 +47,7 @@ var questions = [
     {
         number: "5",
         question: "How many slaps were awarded by Lily to Marshall during the Marshall-Barney Slap Bet?",
-        answer: [
+        answers: [
             "2",
             "5",
             "7",
@@ -77,7 +77,7 @@ function pullQuestion () {
 
 //Countdown for seconds remaining for question
 function timer() {
-    i = 10;
+    i = 11;
     
    timer = setInterval (function(){
        i--;
@@ -88,6 +88,10 @@ function timer() {
            $("#timer").html("Time is up. The correct answer was " + questions[questionDisplayed].correctAnswer + ".");
            incorrectAnswerTotal++;
            $("#incorrect").html(incorrectAnswerTotal);
+           setTimeout(function(){
+            questionDisplayed++;
+            pullQuestion ();
+        }, 3000);
        }
    }, 1000);
 }
