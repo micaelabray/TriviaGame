@@ -19,3 +19,19 @@ body {
     text-align: center;
     font-size: 200%;
 }
+
+.correctSection {
+    text-align: right;
+}
+
+#correct {
+    text-align: left;
+}
+
+.incorrectSection {
+    text-align: right;
+}
+
+#incorrect {
+    text-align: left;
+}
