@@ -35,3 +35,9 @@ body {
 #incorrect {
     text-align: left;
 }
+
+#question {
+    font-size: 150%;
+    margin: 20px;
+    text-align: center;
+}
