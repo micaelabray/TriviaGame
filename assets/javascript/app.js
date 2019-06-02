@@ -63,7 +63,7 @@ var incorrectAnswerTotal = 0;
 var questionDisplayed = 0;
 var answerSelection;
 var correctAnswer;
-var i;
+var interval;
 
 
 function pullQuestion () {
@@ -76,14 +76,14 @@ function pullQuestion () {
 }
 
 //Countdown for seconds remaining for question
-function timer() {
-    i = 11;
+function timerInterval() {
+    interval = 10;
     
-   timer = setInterval (function(){
-       i--;
-       $("#timer").html("Time Left: " + i);
-    
-       if (i === 0) {
+    timer = setInterval (function(){
+       $("#timer").html("Time Left: " + interval);
+       interval--;
+
+       if (interval === 0) {
            clearInterval(timer);
            $("#timer").html("Time is up. The correct answer was " + questions[questionDisplayed].correctAnswer + ".");
            incorrectAnswerTotal++;
@@ -93,7 +93,7 @@ function timer() {
             pullQuestion ();
         }, 3000);
        }
-   }, 1000);
+    }, 1000);
 }
 
 
@@ -101,10 +101,9 @@ $(document).ready(function(){
 
     // Starts the game running
     $("#question").click(function () {
-        i = 0;
+        interval = 0;
         pullQuestion();
-        timer();
-        // checkAnswer ();
+        timerInterval();
     });
 
     //Checks to see if selected answer matches correct answer
@@ -123,6 +122,7 @@ $(document).ready(function(){
         setTimeout(function(){
             questionDisplayed++;
             pullQuestion ();
+            timerInterval ();
         }, 3000);
     })
 
@@ -141,6 +141,7 @@ $(document).ready(function(){
         setTimeout(function(){
             questionDisplayed++;
             pullQuestion ();
+            timerInterval ();
         }, 3000);
     })
 
@@ -159,6 +160,7 @@ $(document).ready(function(){
         setTimeout(function(){
             questionDisplayed++;
             pullQuestion ();
+            timerInterval ();
         }, 3000);
     })
 
@@ -177,6 +179,7 @@ $(document).ready(function(){
         setTimeout(function(){
             questionDisplayed++;
             pullQuestion ();
+            timerInterval ();
         }, 3000);
     })
 
